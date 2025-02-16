@@ -1,5 +1,6 @@
 version: '3.8'
-services: 
+services:
+
   midas-db:
     container_name: db
     image: mysql
@@ -13,11 +14,11 @@ services:
       - db_data:/var/lib/mysql
     networks:
       - midas-net
-  
+
   midas-app:
     container_name: app
-    entrypoint: ["sh", "-c", "npm install && npm run build && npm run start"]
     build: .
+      - ./:/app
     ports: 
       - 3000:3000
     networks:
@@ -28,8 +29,5 @@ networks:
     driver: bridge
 
 volumes:
-  app_data:
+  
   db_data:
-
-
-

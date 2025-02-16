@@ -1,13 +1,16 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #2b7634;
-    --foreground: #ededed;
-  }
+  --background: #FFFFFF;
+  /* A bright, clean white that opens up the design */
+  --menu: #2C3E50;
+  /* A solid, dark blue for panels or headers that anchors the layout */
+  --primary-text: #333333;
+  /* A reliable dark gray for easy-to-read primary text */
+  --secondary-text: #7D8CA3;
+  /* A soft blue-gray that offers subtle contrast for secondary text */
+  --primary-button: #A3D2CA;
+  /* A pastel teal that feels fresh and inviting for call-to-action buttons */
+  --secondary-button: #F0F4F8;
+  /* A gentle pastel blue-gray to complement the primary button */
 }
 
 html,
@@ -16,8 +19,15 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  color: var(--primary-text)
+}
+
+h1 {
+  color: var(--primary-text)
+}
+
 body {
-  color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
